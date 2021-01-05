@@ -42,6 +42,16 @@
   :init
   (beacon-mode 1))
 
+(use-package markdown-mode
+  :ensure t
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "multimarkdown"))
+
+(custom-set-variables
+ '(markdown-command "/Users/wisnumulya/opt/anaconda3/bin/pandoc"))
+
 (setq inhibit-startup-message t)
 
 (custom-set-variables
@@ -54,7 +64,8 @@
  '(custom-enabled-themes '(spacemacs-dark))
  '(custom-safe-themes
    '("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default))
- '(package-selected-packages '(beacon spacemacs-theme which-key use-package)))
+ '(package-selected-packages
+   '(markdown-mode beacon spacemacs-theme which-key use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

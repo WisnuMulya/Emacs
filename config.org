@@ -116,3 +116,11 @@
    #+begin_src emacs-lisp
      (global-set-key (kbd "C-x b") 'ibuffer)
    #+end_src
+* Avy
+** Enable avy
+   #+begin_src emacs-lisp
+     (use-package avy
+       :ensure t
+       :bind
+       ("M-s" . avy-goto-char))
+   #+end_src

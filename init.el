@@ -12,41 +12,9 @@
   (package-refresh-contents)
   (package-install 'spacemacs-theme))
 
-(setq make-backup-file nil)
-(setq auto-save-default nil)
-
-(defalias 'yes-or-no-p 'y-or-n-p)
-
 ;;; This is the actual config file. It is omitted if it doesn't exist so emacs won't refuse to launch.
 (when (file-readable-p "~/.emacs.d/config.org")
   (org-babel-load-file (expand-file-name "~/.emacs.d/config.org")))
-
-(global-set-key (kbd "<s-return>") 'ansi-term)
-
-(setq scroll-conservatively 100)
-
-;; (setq ring-bell-function 'ignore)
-
-(when window-system (global-hl-line-mode t))
-
-(global-prettify-symbols-mode t)
-
-(use-package which-key
-  :ensure t
-  :init
-  (which-key-mode))
-
-(use-package beacon
-  :ensure t
-  :init
-  (beacon-mode 1))
-
-(use-package markdown-mode
-  :ensure t
-  :mode (("README\\.md\\'" . gfm-mode)
-         ("\\.md\\'" . markdown-mode)
-         ("\\.markdown\\'" . markdown-mode))
-  :init (setq markdown-command "multimarkdown"))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -63,9 +31,6 @@
    '(ol-bbdb ol-bibtex ol-docview ol-eww ol-gnus ol-info ol-irc ol-mhe ol-rmail org-tempo ol-w3m))
  '(package-selected-packages
    '(org-bullets markdown-mode beacon spacemacs-theme which-key use-package)))
-
-(setq inhibit-startup-message t)
-
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

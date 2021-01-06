@@ -26,11 +26,11 @@
  '(custom-enabled-themes '(spacemacs-dark))
  '(custom-safe-themes
    '("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default))
- '(markdown-command "/Users/wisnumulya/opt/anaconda3/bin/pandoc" t)
+ '(markdown-command "/Users/wisnumulya/opt/anaconda3/bin/pandoc")
  '(org-modules
    '(ol-bbdb ol-bibtex ol-docview ol-eww ol-gnus ol-info ol-irc ol-mhe ol-rmail org-tempo ol-w3m))
  '(package-selected-packages
-   '(org-bullets markdown-mode beacon spacemacs-theme which-key use-package)))
+   '(smex ido-vertical-mode org-bullets markdown-mode beacon spacemacs-theme which-key use-package)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

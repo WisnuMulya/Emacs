@@ -57,7 +57,7 @@
      (setq scroll-conservatively 100)
    #+end_src
 
-** Hl-line mode
+** Line highlight
    #+begin_src emacs-lisp
      (when window-system (global-hl-line-mode t))
    #+end_src
@@ -66,7 +66,7 @@
    #+begin_src emacs-lisp
      (global-prettify-symbols-mode t)
    #+end_src
-** Yes-no keys
+** y-or-no
    #+begin_src emacs-lisp
      (defalias 'yes-or-no-p 'y-or-n-p)
    #+end_src
@@ -82,4 +82,37 @@
 ** Auto save
    #+begin_src emacs-lisp
      (setq auto-save-default nil)
+   #+end_src
+* IDO
+** Enable IDO mode
+   #+begin_src emacs-lisp
+     (setq ido-enable-flex-matching nil)
+     (setq ido-create-new-buffer 'always)
+     (setq ido-everywhere t)
+     (ido-mode 1)
+   #+end_src
+** IDO Vertical
+   #+begin_src emacs-lisp
+     (use-package ido-vertical-mode
+       :ensure t
+       :init
+       (ido-vertical-mode 1))
+     (setq ido-vertical-define-keys 'C-n-and-C-p-only)
+   #+end_src
+** SMEX
+   #+begin_src emacs-lisp
+     (use-package smex
+       :ensure t
+       :init (smex-initialize)
+       :bind
+       ("M-x" . smex))
+   #+end_src
+** Switch buffer
+   #+begin_src emacs-lisp
+     (global-set-key (kbd "C-x C-b") 'ido-switch-buffer)
+   #+end_src
+* Buffers
+** Enable ibuffer
+   #+begin_src emacs-lisp
+     (global-set-key (kbd "C-x b") 'ibuffer)
    #+end_src

@@ -17,10 +17,9 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-(defvar my-term-shell "/bin/zsh")
-(defadvice ansi-term (before force-bash)
-  (interactive (list my-term-shell)))
-(ad-activate 'ansi-term)
+;;; This is the actual config file. It is omitted if it doesn't exist so emacs won't refuse to launch.
+(when (file-readable-p "~/.emacs.d/config.org")
+  (org-babel-load-file (expand-file-name "~/.emacs.d/config.org")))
 
 (global-set-key (kbd "<s-return>") 'ansi-term)
 
@@ -50,11 +49,6 @@
   :init (setq markdown-command "multimarkdown"))
 
 (custom-set-variables
- '(markdown-command "/Users/wisnumulya/opt/anaconda3/bin/pandoc"))
-
-(setq inhibit-startup-message t)
-
-(custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
@@ -64,8 +58,15 @@
  '(custom-enabled-themes '(spacemacs-dark))
  '(custom-safe-themes
    '("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default))
+ '(markdown-command "/Users/wisnumulya/opt/anaconda3/bin/pandoc" t)
+ '(org-modules
+   '(ol-bbdb ol-bibtex ol-docview ol-eww ol-gnus ol-info ol-irc ol-mhe ol-rmail org-tempo ol-w3m))
  '(package-selected-packages
-   '(markdown-mode beacon spacemacs-theme which-key use-package)))
+   '(org-bullets markdown-mode beacon spacemacs-theme which-key use-package)))
+
+(setq inhibit-startup-message t)
+
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -124,3 +124,26 @@
        :bind
        ("M-s" . avy-goto-char))
    #+end_src
+* Config edit/reload
+Setting shortcuts for editing and reloading ==config.org==.
+** Edit
+   #+begin_src emacs-lisp
+     (defun config-visit()
+       (interactive)
+       (find-file "~/.emacs.d/config.org"))
+     (global-set-key (kbd "C-c e") 'config-visit)
+   #+end_src
+** Reload
+   #+begin_src emacs-lisp
+     (defun config-reload()
+       (interactive)
+       (org-babel-load-file (expand-file-name "~/.emacs.d/config.org")))
+     (global-set-key (kbd "C-c r") 'config-reload)
+   #+end_src
+* Rainbow
+Setting background color of any hex color code.
+#+begin_src emacs-lisp
+  (use-package rainbow-mode
+    :ensure t
+    :init (rainbow-mode 1))
+#+end_src

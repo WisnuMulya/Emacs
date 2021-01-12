@@ -13,6 +13,11 @@
    #+end_src
 
 * Org
+** Basic Config
+Open ==C-c '== in the same window.
+#+begin_src emacs-lisp
+  (setq org-src-window-setup 'current-window)
+#+end_src
 ** Org Bullets
    #+begin_src emacs-lisp
      (use-package org-bullets

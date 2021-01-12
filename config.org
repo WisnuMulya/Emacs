@@ -15,6 +15,14 @@ Adding closing parenthesis and else automatically.
 
   (electric-pair-mode t)
 #+end_src
+** kill-whole-word
+   #+begin_src emacs-lisp
+     (defun kill-whole-word ()
+       (interactive)
+       (backward-word)
+       (kill-word 1))
+     (global-set-key (kbd "C-c w w") 'kill-whole-word)
+   #+end_src
 * Terminal
 ** Setting default shell to bash
    #+begin_src emacs-lisp

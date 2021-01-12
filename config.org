@@ -10,7 +10,6 @@ Adding closing parenthesis and else automatically.
   (setq electric-pair-pairs '((?\( . ?\))
 			      (?\[ . ?\])
 			      (?\" . ?\")
-			      (?\' . ?\')
 			      ))
 
   (electric-pair-mode t)

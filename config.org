@@ -50,6 +50,13 @@ Open ==C-c '== in the same window.
        (add-hook 'org-mode-hook (lambda () (org-bullets-mode))))
    #+end_src
 
+* Hungry Delete
+Delete all white space.
+#+begin_src emacs-lisp
+  (use-package hungry-delete
+    :ensure t
+    :config (global-hungry-delete-mode))
+#+end_src
 * Markdown Mode
 ** Initialize markdown mode
    #+begin_src emacs-lisp

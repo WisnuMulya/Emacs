@@ -164,6 +164,13 @@ Delete all white space.
      (global-set-key (kbd "C-x C-b") 'ido-switch-buffer)
    #+end_src
 * Buffers
+** Kill all buffers
+   #+begin_src emacs-lisp
+     (defun kill-all-buffers ()
+       (interactive)
+       (mapc 'kill-buffer (buffer-list)))
+     (global-set-key (kbd "C-M-s-k") 'kill-all-buffers)
+   #+end_src
 ** Always kill current buffer
    #+begin_src emacs-lisp
      (defun kill-current-buffer ()

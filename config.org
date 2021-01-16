@@ -22,6 +22,11 @@ Adding closing parenthesis and else automatically.
        (kill-word 1))
      (global-set-key (kbd "C-c w w") 'kill-whole-word)
    #+end_src
+** Show line and column on the modeline
+   #+begin_src emacs-lisp
+     (line-number-mode 1)
+     (column-number-mode 1)
+   #+end_src
 * Terminal
 ** Setting default shell to bash
    #+begin_src emacs-lisp

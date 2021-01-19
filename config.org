@@ -135,6 +135,16 @@ Delete all white space.
    #+begin_src emacs-lisp
      (setq auto-save-default nil)
    #+end_src
+* Dashboard
+** List recently opened files on dashboard
+   #+begin_src emacs-lisp
+     (use-package dashboard
+       :ensure t
+       :config
+       (dashboard-setup-startup-hook)
+       (setq dashboard-items '((recents . 10)))
+       (setq dashboard-banner-logo-title "Hello, Wisnu!"))
+   #+end_src
 * IDO
 ** Enable IDO mode
    #+begin_src emacs-lisp

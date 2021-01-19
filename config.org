@@ -213,6 +213,13 @@ Setting background color of any hex color code.
     :ensure t
     :init (rainbow-mode 1))
 #+end_src
+Coloring delimiters (parenthesis)
+#+begin_src emacs-lisp
+  (use-package rainbow-delimiters
+    :ensure t
+    :init
+    (rainbow-delimiters-mode 1))
+#+end_src
 * Switch-window
 Package to switch window-efficiently.
 #+begin_src emacs-lisp

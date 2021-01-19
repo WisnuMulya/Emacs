@@ -28,8 +28,20 @@
    '("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default))
  '(org-modules
    '(ol-bbdb ol-bibtex ol-docview ol-eww ol-gnus ol-info ol-irc ol-mhe ol-rmail org-tempo ol-w3m))
+ '(org-structure-template-alist
+   '(("el" . "src emacs-lisp")
+     ("a" . "export ascii")
+     ("c" . "center")
+     ("C" . "comment")
+     ("e" . "example")
+     ("E" . "export")
+     ("h" . "export html")
+     ("l" . "export latex")
+     ("q" . "quote")
+     ("s" . "src")
+     ("v" . "verse")))
  '(package-selected-packages
-   '(dashboard rainbow-delimiters hungry-delete switch-window rainbow-mode avy smex ido-vertical-mode org-bullets markdown-mode beacon spacemacs-theme which-key use-package)))
+   '(company dashboard rainbow-delimiters hungry-delete switch-window rainbow-mode avy smex ido-vertical-mode org-bullets markdown-mode beacon spacemacs-theme which-key use-package)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

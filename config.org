@@ -98,6 +98,7 @@ Delete all white space.
 
 * Moving around Emacs
 ** Which-Key
+   Minor mode to show key bindings, following incomplete command, in a popup.
    #+begin_src emacs-lisp
      (use-package which-key
        :ensure t
@@ -107,6 +108,7 @@ Delete all white space.
    #+end_src
 
 ** Beacon
+   Show beacon when cursor is first initialized in a window.
    #+begin_src emacs-lisp
      (use-package beacon
        :ensure t

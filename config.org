@@ -158,6 +158,17 @@ Delete all white space.
        (setq powerline-default-separator (quote arrow))
        (spaceline-spacemacs-theme))
    #+end_src
+** Diminish
+   Hide minor modes in mode line.
+   #+begin_src emacs-lisp
+     (use-package diminish
+       :ensure t
+       :init
+       (diminish 'hungry-delete-mode)
+       (diminish 'beacon-mode)
+       (diminish 'which-key-mode)
+       (diminish 'subword-mode))
+   #+end_src
 * Dashboard
 ** List recently opened files on dashboard
    #+begin_src emacs-lisp

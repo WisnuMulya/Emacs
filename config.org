@@ -238,14 +238,13 @@ Setting shortcuts for editing and reloading ==config.org==.
      (global-set-key (kbd "C-c r") 'config-reload)
    #+end_src
 * Rainbow
-Setting background color of any hex color code.
 #+begin_src emacs-lisp
+  ;; Setting background color of any hex color code.
   (use-package rainbow-mode
     :ensure t
     :init (rainbow-mode 1))
-#+end_src
-Coloring delimiters (parenthesis)
-#+begin_src emacs-lisp
+
+  ;; Coloring delimiters (parenthesis)
   (use-package rainbow-delimiters
     :ensure t
     :init

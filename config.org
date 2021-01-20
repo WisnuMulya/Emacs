@@ -146,6 +146,16 @@ Delete all white space.
    #+begin_src emacs-lisp
      (setq auto-save-default nil)
    #+end_src
+* Modeline
+** Spaceline
+   #+begin_src emacs-lisp
+     (use-package spaceline
+       :ensure t
+       :config
+       (require 'spaceline-config)
+       (setq powerline-default-separator (quote arrow))
+       (spaceline-spacemacs-theme))
+   #+end_src
 * Dashboard
 ** List recently opened files on dashboard
    #+begin_src emacs-lisp

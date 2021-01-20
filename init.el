@@ -41,7 +41,7 @@
      ("s" . "src")
      ("v" . "verse")))
  '(package-selected-packages
-   '(company dashboard rainbow-delimiters hungry-delete switch-window rainbow-mode avy smex ido-vertical-mode org-bullets markdown-mode beacon spacemacs-theme which-key use-package)))
+   '(spaceline company dashboard rainbow-delimiters hungry-delete switch-window rainbow-mode avy smex ido-vertical-mode org-bullets markdown-mode beacon spacemacs-theme which-key use-package)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
